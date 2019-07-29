@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script language="JavaScript"> 
+			function showEmail(){
+				//根据元素的顺序向下查询
+				var elementId = document.email.text;
+				alert("内容为："+elementId.value);
+				//javascript 正则表达式
+				// /^正则$/.test();
+			}
+		    
+		    //showEmail();
+		</script>
+	</head>
+	<body>
+		<!--name 和 id必须保持一致-->
+		<form name="email" id="email">
+			请输入email地址
+			<input type="text" id = "text" value="">
+			<input type="button" value="显示内容" onclick="showEmail()">
+		</form>
+	</body>
+</html>

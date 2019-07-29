@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<span id="infos"></span><br>
+		<img src="img/g1.jpg" id="imgID">
+		
+	</body>
+	<script type="text/javascript">
+		//图片数组
+			
+			var imges = new Array("img4.png", "img5.png", "img6.png", "g1.jpg", "g2.jpg", "g3.jpg");
+			var foot = 1;//脚标
+		function setClock(){
+			var dates = new Date();//取得时间
+			var elem = document.getElementById("infos");
+			var img = document.getElementById("imgID");
+			elem.innerHTML = "<strong>当期时间"+dates+"</strong>";
+			if(foot < 0 ){
+						foot = imges.length - 1;
+						
+					}
+			img.src = "img/" + imges[foot--];
+			setTimeout(setClock, 2000);//每一秒更新一次
+			
+		}
+		setClock();
+    </script>
+</html>

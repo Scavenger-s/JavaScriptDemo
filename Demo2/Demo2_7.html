@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文本域</title>
+		<script language="JavaScript">
+			function vaildateNote(){
+				var note = document.getElementById("note");
+				var msg = document.getElementById("noteMsg");
+				
+				if(note.value.length >= 15){
+					msg.innerHTML = "输入数据过长";
+					
+					document.getElementById("sub").disabled = "disabled";
+				}
+				msg.innerHTML = "输入数据长度："+ note.value.length;
+				  
+			}
+		</script>
+	</head>
+	<body>
+		<!--onkeydown，退格-->
+		<form action="index.html" method="post">
+		<textarea id="note" name="note" cols="50" rows="10"
+			
+			onkeypress="vaildateNote()" onkeydown="vaildateNote()">
+			hello
+		</textarea>	
+			<span id="noteMsg"></span><br>
+			<button type="submit" name="sub" id="sub" >保存</button>
+		</form>
+		
+	</body>
+</html>

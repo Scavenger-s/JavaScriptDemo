@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Demo1_3</title>
+		<script type="text/javascript">
+			//图片数组
+			var foot = 1;//脚标
+			var imges = new Array("img4.png", "img5.png", "img6.png");
+			
+			
+			
+			window.onload = function() {
+				
+				var pbut = document.getElementById("pre");
+				var nbut = document.getElementById("next");
+				var img = document.getElementById("imgID");
+				pbut.addEventListener("click", function(){
+					if(foot < 0 ){
+						foot = imges.length - 1;
+					}
+					img.src = "img/" + imges[foot--];
+					
+
+				},false);
+				nbut.addEventListener("click", function(){
+					if(foot > imges.length - 1)
+					{
+						foot = 0;
+					}
+					 img.src = "img/" + imges[foot++]; 
+					
+				},false);
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div>
+			<img src="img/g1.jpg" id="imgID">
+			<br>
+			<input type="button" value="上一张" id="pre">
+			<input type="button" value="下一张" id="next">
+		</div>
+	</body>
+</html>

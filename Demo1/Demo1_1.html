@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>JSDemo</title>
+		<script language="JavaScript">
+			//鼠标移入事件触发
+			function changeColor(obj ,bgcolor){
+				//改变颜色
+				obj.bgColor = bgcolor;
+				console.log(bgcolor)
+				//alert("hello world");
+			}
+			
+		</script>
+	</head>
+	<body >
+		<table border="1" width="30%" height="30%" bgcolor="antiquewhite">
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<tr onmousemove="changeColor(this, 'green')"
+			onmouseout="changeColor(this, 'antiquewhite')"	> 
+				<td>w</td>
+				<td>q</td>
+				<td>e</td>	
+			</tr>
+			<tr onmousemove="changeColor(this, 'green')"
+			onmouseout="changeColor(this, 'antiquewhite')">
+				<td>w</td>
+				<td>q</td>
+				<td>e</td>	
+			</th>
+		</table>
+	</body>
+</html>

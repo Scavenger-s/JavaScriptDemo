@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>复选框，全选</title>
+		<script language="JavaScript">
+		     function showInist(){
+		     	var inist = document.all("inst");
+		     	var str = "insters:"
+		     	for(var i = 0;i < inist.length; i++){
+		     		if(inist[i].checked){
+		     			str += inist[i].value+"   ";
+		     		}
+		     	}
+		     	alert(str);
+		     }
+		     function selectAll(){
+		     	var inist = document.all("inst");
+		     	for(var i =0; i < inist.length; i++){
+		     		inist[i].checked = document.getElementById("selea").checked;
+		     	}
+		     }
+		</script>
+	</head>
+	<body>
+		请选择兴趣<br>
+		<input type="checkbox" value="自拍" name="inst" id="inst">自拍<br>
+		<input type="checkbox" value="自1" name="inst" id="inst">自1<br>
+		<input type="checkbox" value="自2" name="inst" id="inst">自2<br>
+		<input type="checkbox" value="自3" name="inst" id="inst">自3<br>
+		<input type="checkbox" value="自4" name="inst" id="inst">自4<br>
+		<input type="checkbox" value="" name="selea" id="selea" onclick="selectAll()">全选<br>
+		<button onclick="showInist()">显示信息</button>
+	</body>
+</html>

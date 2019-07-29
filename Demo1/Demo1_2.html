@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Demo1_2</title>
+		<script language="JavaScript">
+			function handle(){
+				alert("事件触发");
+			}
+			//页面加载时进行的事件处理
+			window.onload = function(){//匿名函数
+				//获取img元素对象
+				var imgElement = document.getElementById("imgid");
+				//事件类型，触发函数，第三个参数一般为false
+				//动态触发的好处，不会与html代码混在一起
+				//imgElement.addEventListener("click", handle, false);
+				//第二种动态绑定
+				var spElement;
+				spElement.addEventListener("click", function(){
+					//在元素内容添加指定内容，而且内容可以是HTML代码
+					document.getElementById("info").innerHTML = "<img src = 'img/g2.jpg'>";
+				}, 
+				false)
+			}
+		</script>
+	</head>
+	<body>
+		<!--id是整个javascript的核心必须存在-->
+		<!--<img src="img/g1.jpg" id="imgid">-->
+		<span id="info"></span>
+	</body>
+</html>

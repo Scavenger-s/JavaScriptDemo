@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>下拉列表框</title>
+		<script language="JavaScript">
+			function showCity(){
+				//alert("hello");
+				alert("家乡是:"+document.getElementById("city").value);
+			}
+		</script>
+	</head>
+	<body>
+		你的家乡<select name="city" id="city" onchange="showCity()">
+			<option value="BJ">BJ</option>
+			<option value="SH">SH</option>
+			<option value="SD">SD</option>
+		</select><br>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script language="JavaScript">
+			window.open("index.html");
+			//窗口关闭
+			function webClose(){
+				window.close();
+			}
+			//跳转
+			function webLocation(url){
+				window.location = url;
+			}
+		</script>
+	</head>
+	<body>
+		<!--<button onclick="webClose()">关闭窗口</button>-->
+		<select id="url" name="url" onchange="webLocation(this.value)">
+			<option>========请选择要跳转的页面=========</option>
+			<option value="index.html">INDEX</option>
+		</select>>
+	</body>
+</html>

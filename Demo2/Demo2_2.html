@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/midl.css" />
+		<script language="JavaScript">
+			function vaildate(){
+				
+				return showEmail();
+			}
+			function showEmail(){
+				//根据元素的顺序向下查询
+				var elementId = document.getElementById("text");
+				if(/^\w+@\w+\.\w+$/.test(elementId.value)){
+					elementId.className = "right";
+					
+					return true;
+				}
+				else
+				{
+					elementId.className = "wrong";
+					return false;
+					
+				}
+				
+				//javascript 正则表达式
+				// /^正则$/.test();
+			}
+		</script>
+	</head>
+	<body>
+		<!--onsubmit 返回true还是false是整个表单提交的关卡-->
+		<form name="email" id="email"  method="post" action="index.html">
+			请输入email地址
+			<input type="text" id = "text" value="" class="init">
+			<input type="button" value="显示内容" >
+		</form>
+	</body>
+</html>
